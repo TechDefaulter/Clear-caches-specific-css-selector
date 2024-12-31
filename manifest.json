@@ -1,12 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Advanced Cache Cleaner",
-  "version": "2.0",
-  "description": "Clear cache and other browsing data with advanced options.",
+  "name": "Advanced Cache Cleaner with Persistent Monitoring",
+  "version": "3.0",
+  "description": "Clear cache and monitor CSS selectors even after page refresh or popup close.",
   "permissions": [
     "browsingData",
     "activeTab",
-    "scripting"
+    "scripting",
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"
@@ -23,5 +24,15 @@
     "16": "icons/icon-16.png",
     "48": "icons/icon-48.png",
     "128": "icons/icon-128.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
 }

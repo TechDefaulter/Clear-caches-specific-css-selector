@@ -10,6 +10,7 @@
     <div class="container">
       <h1>Cache Cleaner</h1>
       <form id="clearForm">
+        <!-- Data clearing checkboxes -->
         <label><input type="checkbox" id="cache" checked /> Cache</label><br />
         <label><input type="checkbox" id="cookies" /> Cookies</label><br />
         <label><input type="checkbox" id="history" /> Browsing History</label
@@ -17,6 +18,7 @@
         <label><input type="checkbox" id="localStorage" /> Local Storage</label
         ><br />
 
+        <!-- Time range selection -->
         <label for="timeRange">Time Range:</label>
         <select id="timeRange">
           <option value="0">Everything</option>
@@ -25,17 +27,22 @@
           <option value="604800000">Last 7 days</option>
           <option value="2592000000">Last 30 days</option>
         </select>
-        <button type="submit">Clear Selected Data</button>
+
+        <!-- Selector input for monitoring -->
         <label for="cssSelector">CSS Selector (optional):</label>
         <input
           type="text"
           id="cssSelector"
           placeholder="e.g., .popup, #ad-banner"
         />
+
+        <!-- Submit buttons -->
         <button type="submit">Set and Clear</button>
       </form>
+
+      <!-- Status display -->
       <p id="status"></p>
     </div>
+    <script src="popup.js"></script>
   </body>
-  <script src="popup.js"></script>
 </html>
