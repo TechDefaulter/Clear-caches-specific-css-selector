@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cache Cleaner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Cache Cleaner</h1>
+      <form id="clearForm">
+        <label><input type="checkbox" id="cache" checked /> Cache</label><br />
+        <label><input type="checkbox" id="cookies" /> Cookies</label><br />
+        <label><input type="checkbox" id="history" /> Browsing History</label
+        ><br />
+        <label><input type="checkbox" id="localStorage" /> Local Storage</label
+        ><br />
+
+        <label for="timeRange">Time Range:</label>
+        <select id="timeRange">
+          <option value="0">Everything</option>
+          <option value="3600000">Last hour</option>
+          <option value="86400000">Last 24 hours</option>
+          <option value="604800000">Last 7 days</option>
+          <option value="2592000000">Last 30 days</option>
+        </select>
+        <button type="submit">Clear Selected Data</button>
+        <label for="cssSelector">CSS Selector (optional):</label>
+        <input
+          type="text"
+          id="cssSelector"
+          placeholder="e.g., .popup, #ad-banner"
+        />
+        <button type="submit">Set and Clear</button>
+      </form>
+      <p id="status"></p>
+    </div>
+  </body>
+  <script src="popup.js"></script>
+</html>

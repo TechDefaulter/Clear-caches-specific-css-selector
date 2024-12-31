@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  padding: 20px;
+  max-width: 300px;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #343a40;
+}
+
+form {
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p#status {
+  color: #28a745;
+  margin-top: 10px;
+}
